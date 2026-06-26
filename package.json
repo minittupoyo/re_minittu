@@ -1,0 +1,49 @@
+{
+  "name": "re_minittu",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "dependencies": {
+    "@fontsource-variable/noto-sans-jp": "^5.2.10",
+    "@fontsource-variable/outfit": "^5.2.8",
+    "@nuxt/content": "3.14.0",
+    "@nuxt/image": "2.0.0",
+    "@nuxt/ui": "4.9.0",
+    "@tiptap/core": "^3",
+    "@tiptap/extension-bubble-menu": "^3",
+    "@tiptap/extension-code": "^3",
+    "@tiptap/extension-collaboration": "^3",
+    "@tiptap/extension-drag-handle": "^3",
+    "@tiptap/extension-drag-handle-vue-3": "^3",
+    "@tiptap/extension-floating-menu": "^3",
+    "@tiptap/extension-horizontal-rule": "^3",
+    "@tiptap/extension-image": "^3",
+    "@tiptap/extension-mention": "^3",
+    "@tiptap/extension-node-range": "^3",
+    "@tiptap/extension-placeholder": "^3",
+    "@tiptap/markdown": "^3",
+    "@tiptap/pm": "^3",
+    "@tiptap/starter-kit": "^3",
+    "@tiptap/suggestion": "^3",
+    "@tiptap/vue-3": "^3",
+    "better-sqlite3": "^12.11.1",
+    "nuxt": "^4.4.8",
+    "remark-breaks": "^4.0.0",
+    "remark-link-card-plus": "^0.7.4",
+    "tailwindcss": "^4.3.1",
+    "typescript": "^5.6.3 || ^6.0.0",
+    "vue": "^3.5.38",
+    "vue-router": "^5.1.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@iconify-json/lucide": "^1.2.114",
+    "@iconify-json/tabler": "^1.2.35"
+  }
+}
