@@ -1,0 +1,11 @@
+{
+    "$schema": "./node_modules/wrangler/config-schema.json",
+    "name": "re-minittu",
+    "assets": {
+        "directory": "./dist/"
+    },
+    "route": {
+        "pattern": "blog.minittu.net",
+        "custom_domain": true
+    }
+}

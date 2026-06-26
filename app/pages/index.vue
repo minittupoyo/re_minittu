@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { ButtonProps } from '@nuxt/ui';
-const { data: recentPosts } = await useAsyncData("recentPosts", () => queryCollection("blog").order("date","DESC").limit(6).all())
+const { data: recentPosts } = await useAsyncData("recentPosts", () => queryCollection("blog").where("draft", "=", false).order("date","DESC").limit(6).all())
 
 const heroLinks = ref<ButtonProps[]>([
     {

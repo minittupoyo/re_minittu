@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data: allPosts } = useAsyncData("allPosts", () => queryCollection("blog").order("date", "DESC").all())
+const { data: allPosts } = useAsyncData("allPosts", () => queryCollection("blog").where("draft", "=", false).order("date", "DESC").all())
 useSeoMeta({
     title: "記事一覧 | minittu",
     description: "投稿されている記事一覧です。"

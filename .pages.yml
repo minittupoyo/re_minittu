@@ -1,0 +1,60 @@
+media:
+  input: public/images
+  output: /images
+  rename: random
+  categories: [image]
+
+content:
+  - name: blog
+    label: ブログ記事
+    path: content/blog
+    view:
+      fields: [title, date, draft, tags]
+    fields:
+      - name: title
+        label: タイトル
+        type: string
+        required: true
+      - name: description
+        label: 説明
+        type: string
+        required: true
+      - name: date
+        label: 投稿日
+        type: date
+        required: true
+        options:
+          time: true
+          format: "YYYY-MM-DDTHH:mm"
+      - name: emoji
+        label: 絵文字
+        type: string
+      - name: tags
+        label: タグ
+        type: string
+        list: true
+      - name: draft
+        label: 下書き
+        type: boolean
+        default: false
+      - name: body
+        label: 本文
+        type: rich-text
+
+  - name: pages
+    label: 固定ページ
+    path: content/page
+    view:
+      fields: [title, description]
+    fields:
+      - name: title
+        label: タイトル
+        type: string
+        required: true
+      - name: description
+        label: 説明
+        type: string
+        required: true
+      - name: body
+        label: 本文
+        type: rich-text

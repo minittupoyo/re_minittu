@@ -10,7 +10,9 @@ export default defineContentConfig({
                 title: z.string(),
                 description: z.string(),
                 date: z.coerce.date(),
-                tags: z.array(z.string()).default([])
+                tags: z.array(z.string()).default([]),
+                emoji: z.string().optional(),
+                draft: z.boolean().default(false)
             })
         }),
         pages: defineCollection({
