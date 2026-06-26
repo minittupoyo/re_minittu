@@ -2,7 +2,9 @@
 title: はじめまして
 description: はじめましての記事
 date: 2026-06-25
-tags: [ブログ]
+tags:
+  - ブログ
+draft: false
 ---
 
 ## はじめまして！
