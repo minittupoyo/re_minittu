@@ -29,7 +29,7 @@ const heroLinks = ref<ButtonProps[]>([
                     <Icon name="i-lucide-chevron-right" class="transition duration-300 group-hover:translate-x-1" />
                 </a>
             </div>
-            <UBlogPosts>
+            <UBlogPosts :ui="{base: 'gap-6 lg:gap-y-6'}">
                 <UBlogPost v-for="(post, index) in recentPosts" v-bind="post" :key="index" :to="post.path">
                     <template #date>
                         {{ useFormatDate(post.date) }}

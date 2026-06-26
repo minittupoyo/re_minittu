@@ -1,5 +1,6 @@
 {
     "$schema": "./node_modules/wrangler/config-schema.json",
+    "compatibility_date": "2026-06-26",
     "name": "re-minittu",
     "assets": {
         "directory": "./dist/"

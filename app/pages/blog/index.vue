@@ -10,7 +10,7 @@ useSeoMeta({
     <UContainer>
         <UPage>
             <UPageHeader title="記事一覧！" :description="`${allPosts?.length}件の記事があります。`" :ui="{ root: 'border-b-0' }" />
-            <UBlogPosts>
+            <UBlogPosts :ui="{base: 'gap-6 lg:gap-y-6'}">
                 <UBlogPost v-for="(post, index) in allPosts" v-bind="post" :key="index" :to="post.path">
                     <template #date>
                         {{ useFormatDate(post.date) }}

@@ -1,0 +1,118 @@
+{
+  "$schema": "https://pitcms.net/schema/pitcms.schema.json",
+  "schemaVersion": 1,
+  "collections": [
+    {
+      "name": "blog",
+      "label": "ブログ記事",
+      "path": "content/blog",
+      "extension": "md",
+      "fields": [
+        {
+          "type": "text",
+          "name": "title",
+          "label": "タイトル",
+          "required": true,
+          "maxLength": 200
+        },
+        {
+          "type": "textarea",
+          "name": "description",
+          "label": "概要",
+          "required": true,
+          "maxLength": 500
+        },
+        {
+          "type": "text",
+          "name": "emoji",
+          "label": "絵文字",
+          "maxLength": 2,
+          "note": "記事を表す絵文字を1文字入力してください"
+        },
+        {
+          "type": "date",
+          "name": "date",
+          "label": "投稿日時",
+          "required": true,
+          "includeTime": true,
+          "default": "now"
+        },
+        {
+          "type": "select",
+          "name": "tags",
+          "label": "タグ",
+          "multiple": true,
+          "options": [
+            { "value": "Astro", "label": "Astro" },
+            { "value": "Nuxt", "label": "Nuxt" },
+            { "value": "自宅サーバー", "label": "自宅サーバー" },
+            { "value": "Docker", "label": "Docker" },
+            { "value": "Cloudflare", "label": "Cloudflare" }
+          ]
+        },
+        {
+          "type": "boolean",
+          "name": "draft",
+          "label": "下書き",
+          "default": true
+        },
+        {
+          "type": "richtext",
+          "name": "content",
+          "label": "本文",
+          "disabledFeatures": ["taskList"]
+        }
+      ],
+      "layout": [
+        ["title"],
+        ["description"],
+        ["emoji", "date"],
+        ["tags", "draft"],
+        ["content"]
+      ],
+      "pit": {
+        "title": "title",
+        "body": "content",
+        "draft": "draft",
+        "createdAt": "date"
+      }
+    },
+    {
+      "name": "pages",
+      "label": "固定ページ",
+      "path": "content/page",
+      "extension": "md",
+      "fields": [
+        {
+          "type": "text",
+          "name": "title",
+          "label": "タイトル",
+          "required": true,
+          "maxLength": 200
+        },
+        {
+          "type": "textarea",
+          "name": "description",
+          "label": "概要",
+          "required": true,
+          "maxLength": 500
+        },
+        {
+          "type": "richtext",
+          "name": "content",
+          "label": "本文",
+          "disabledFeatures": ["taskList"]
+        }
+      ],
+      "layout": [
+        ["title"],
+        ["description"],
+        ["content"]
+      ],
+      "pit": {
+        "title": "title",
+        "body": "content"
+      }
+    }
+  ]
+}
