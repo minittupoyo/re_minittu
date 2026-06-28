@@ -8,6 +8,7 @@ content:
   - name: blog
     label: ブログ記事
     path: content/blog
+    type: collection
     view:
       fields: [title, date, draft, tags]
     fields:
@@ -44,6 +45,7 @@ content:
   - name: pages
     label: 固定ページ
     path: content/page
+    type: collection
     view:
       fields: [title, description]
     fields:
