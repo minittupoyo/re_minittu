@@ -26,7 +26,7 @@ content:
         required: true
         options:
           time: true
-          format: "YYYY-MM-DDTHH:mm"
+          format: "yyyy-MM-dd'T'HH:mm"
       - name: emoji
         label: 絵文字
         type: string
